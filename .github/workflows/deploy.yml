@@ -3,7 +3,7 @@ name: Deploy to ICDSoft via FTP
 on:
   push:
     branches:
-      - main  # Change to 'master' if your branch is named that
+      - main  # Change if your branch is 'master'
 
 jobs:
   ftp-deploy:
@@ -24,6 +24,9 @@ jobs:
           exclude: |
             **/.git*
             **/.github/**
+            **/.vscode/**
+            **/node_modules/**
             **/README.md
+            **/LICENSE
             **/*.psd
-
+            **/*.xcf
