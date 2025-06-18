@@ -7,7 +7,7 @@ on:
 
 jobs:
   ftp-deploy:
-    name: 📤 Upload website to ICDSoft
+    name: 📤 Upload deploy/ folder to ICDSoft
     runs-on: ubuntu-latest
 
     steps:
@@ -20,12 +20,6 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: deploy
           server-dir: /home/kourous/www/nikos/
-          exclude: |
-            **/.git*
-            **/.github/**
-            **/.vscode/**
-            **/node_modules/**
-            **/README.md
-            **/LICENSE
           dangerous-clean-slate: true
