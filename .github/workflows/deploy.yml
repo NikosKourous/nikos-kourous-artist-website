@@ -3,7 +3,7 @@ name: Deploy to ICDSoft via FTP
 on:
   push:
     branches:
-      - main  # Change if your branch is 'master'
+      - main
 
 jobs:
   ftp-deploy:
@@ -28,5 +28,4 @@ jobs:
             **/node_modules/**
             **/README.md
             **/LICENSE
-            **/*.psd
-            **/*.xcf
+          dangerous-clean-slate: true
