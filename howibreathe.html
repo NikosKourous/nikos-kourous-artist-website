@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>how i breathe</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    main {
+      padding: 1rem 0;
+    }
+
+    h1, p {
+      text-align: center;
+    }
+
+    .gif-container {
+  display: flex;
+  justify-content: flex-start; /* aligns left by default */
+  margin: 1rem 0;
+}
+
+
+    .gif-container img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Desktop override */
+    @media (min-width: 768px) {
+      body {
+        padding: 3rem 6rem;
+      }
+
+      main, header, footer {
+        max-width: 900px;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      h1, p {
+        text-align: left;
+      }
+
+.gif-container video {
+  width: 500px;
+  height: auto;
+}
+
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>how i breathe</h1>
+    <p><i>Nikos Antonio Kourous Vázquez</i></p>
+  </header>
+
+  <main>
+    <div class="gif-container video">
+      <video
+        src="image_files/how i breathe.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+      ></video>
+    </div>
+    
+    <p style="font-size: 0.9rem;">
+      A looping breath. Rendered from memory.  
+    </p>
+  </main>
+
+  <footer style="text-align: center; font-size: 0.8rem; margin-top: 2rem;">
+    <p>© 2025 Nikos Antonio Kourous-Vázquez</p>
+    <p><i><a href="https://instagram.com/nikoskourous" target="_blank" rel="noopener noreferrer">@nikoskourous</a></i></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* Ensure default spacing is not too tight or too wide */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: white;
+    color: black;
+  }
+  
+  /* Center everything in the middle column */
+  .container {
+    max-width: 300px;
+    width: 100%;            /* Makes it shrink on small screens */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  /* Make name stand out */
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);  /* Scales between 1.5rem–2rem */
+  }
+  .bio {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+  }
+  li {
+    margin: 0.5rem 0;
+  }
+  a {
+    padding: 0.2rem 0.4rem;
+    display: inline-block;
+  }
+    
+  
+  /* Year headers */
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Clean list style for project links */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    margin: 0.3rem 0;
+  }
+  
+  /* Make links simple but obvious */
+  a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+/* === BACKGROUND IMAGE SETUP === */
+
+.background-image {
+    position: fixed;                /* Lock it behind everything */
+    top: 0;
+    left: 0;
+    width: 120vw;                   /* Full screen width */
+    height: 20vw;                  /* Full screen height */
+    background-image: url("quack (2).png");  /* Or "quack.png" if renamed */
+    background-position: center;    /* Centered crop */
+    background-repeat: no-repeat;
+    z-index: -1;                    /* Place behind all content */
+    
+    /* === FILTERS YOU CAN TWEAK === */
+    opacity: 0.2;                   /* Adjust to desired transparency */
+  }
+  
+  /* Ensure foreground content stays readable */
+  body {
+    background: transparent;
+    color: black;  /* Adjust if image is dark */
+  }
+  
+  /* === Desktop layout overrides === */
+@media (min-width: 768px) {
+  .container {
+    max-width: 700px;      /* Allow a wider content column */
+    margin: 3rem 5rem;     /* Push away from top-left corner */
+    text-align: left;      /* Align text to the left */
+  }
+
+  h1, .bio, h2, ul, li {
+    text-align: left;      /* Override any inherited centering */
+  }
+
+  .bio {
+    font-size: 1.1rem;     /* Slightly larger bio on desktop */
+    max-width: 80%;        /* Keep it readable */
+  }
+
+  h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+}

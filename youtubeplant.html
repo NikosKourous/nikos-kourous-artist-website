@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>youtube plant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    main {
+      padding: 1rem 0;
+    }
+
+    h1, p {
+      text-align: center;
+    }
+
+    .media-block {
+      margin: 2rem 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    video, img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Desktop layout */
+    @media (min-width: 768px) {
+      body {
+        padding: 3rem 6rem;
+      }
+
+      main, header, footer {
+        max-width: 900px;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      h1, p {
+        text-align: left;
+      }
+
+      .media-block {
+        justify-content: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>youtube plant</h1>
+    <p><i>Nikos Antonio Kourous Vázquez</i></p>
+  </header>
+
+  <main>
+    <!-- 1. Introductory Essay Text -->
+    <p>
+      A struggling houseplant, in a pot no larger than a mug of tea filled with dry ashy dirt, sits lifelessly in front of a laptop screen. Luckily, I’ve equipped it with cables and its very own Arduino. A soil moisture sensor and a light-dependent resistor stick out from its sad collection of dirt, desperately informing the Arduino and laptop of the plant’s poor condition. By bestowing this plant with this sophisticated technology, I’ve lent it agency to take matters into its own hands. The plant slowly opens YouTube windows, frantically searching for answers to improve its condition. One by one, videos start playing; ‘Teen’s invention makes water out of thin air,’ ‘This bottle makes water out of the air,’ and ‘Top 10 Types of Water’. 
+    </p>
+
+    <!-- 2. good night light mp4 -->
+    <div class="media-block">
+      <video src="image_files/yt_plant/good_night_light_compressed.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <!-- 3. Supporting context text -->
+    <p>
+      This responsive system was designed to reinterpret online content through organic presence. The plant's behavior is influenced by sound and light patterns emitted from algorithmically selected YouTube streams.
+    </p>
+
+    <div class="media-block">
+        <video
+        src="image_files/yt_plant/yt_plant_demonstration_compressed.mp4"
+        autoplay
+        muted
+        loop
+        controls
+        playsinline
+        ></video>
+    </div>
+  
+  </main>
+
+  <footer style="text-align: center; font-size: 0.8rem; margin-top: 2rem;">
+    <p>© 2025 Nikos Antonio Kourous-Vázquez</p>
+    <p><i><a href="https://instagram.com/nikoskourous" target="_blank" rel="noopener noreferrer">@nikoskourous</a></i></p>
+  </footer>
+</body>
+</html>

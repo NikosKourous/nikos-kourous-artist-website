@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Nikos Antonio Kourous Vázquez</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* Make sure newlines from statement.txt appear correctly */
+    .bio {
+      white-space: pre-wrap;
+    }
+
+    /* Optional image styling */
+    .portrait {
+      max-width: 550px;
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .portrait {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <h1>About</h1>
+
+    <!-- Portrait Image -->
+    <img src="image_files/me.png" alt="Portrait of Nikos" class="portrait" />
+
+    <!-- Artist statement will be loaded into this <div> -->
+    <div id="artist-statement" class="bio">
+      Loading artist statement...
+    </div>  
+
+    <!-- Link back to homepage -->
+    <p style="margin-top: 2rem;">
+      <a href="homepage.html">← Back to home</a>
+    </p>
+  </main>
+
+  <!-- Load artist statement from statement.txt -->
+  <script>
+    fetch("statement.txt")
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById("artist-statement").textContent = text;
+      })
+      .catch(error => {
+        document.getElementById("artist-statement").textContent =
+          "Failed to load artist statement.";
+        console.error(error);
+      });
+  </script>
+  
+</body>
+</html>
