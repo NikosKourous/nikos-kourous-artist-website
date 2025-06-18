@@ -17,5 +17,5 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./deploy/
-          server-dir: /home/kourous/www/nikos/
+          server-dir: /kourous/www/nikos/
           dangerous-clean-slate: true
