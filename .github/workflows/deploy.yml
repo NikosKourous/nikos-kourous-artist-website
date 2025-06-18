@@ -1,25 +1,21 @@
 name: Deploy to ICDSoft via FTP
-
 on:
   push:
     branches:
       - main
-
 jobs:
   ftp-deploy:
     name: 📤 Upload deploy/ folder to ICDSoft
     runs-on: ubuntu-latest
-
     steps:
       - name: 📥 Checkout repository
         uses: actions/checkout@v3
-
       - name: 📤 Deploy to FTP server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: deploy/
-          server-dir: /home/kourous/www/nikos/deploy/
+          local-dir: ./deploy/
+          server-dir: /home/kourous/www/nikos/
           dangerous-clean-slate: true
